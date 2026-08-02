@@ -431,9 +431,9 @@ function loadSprite(filename) {
   };
   img.onerror = () => {
     document.getElementById('imgNote').textContent =
-      "Couldn't load " + filename + " from G:\\video game\\pics — check the file exists there.";
+      "Couldn't load " + filename + " from the pics/ folder — check the file exists there.";
   };
-  img.src = 'file:///G:/video%20game/pics/' + encodeURIComponent(filename).replace(/%2F/g, '/');
+  img.src = 'pics/' + encodeURIComponent(filename).replace(/%2F/g, '/');
   return entry;
 }
 
